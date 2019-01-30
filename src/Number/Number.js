@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Number.css';
 
 
-function Number(props) {
-    return (
-        <div className="number">
-            <p>{Math.floor(Math.random() * 100) + 1}</p>
-        </div>
-    );
- }
+class Number extends Component {
+    render(props) {
+        return (
+            <div className="number">
+                <p>{Math.floor(Math.random() * 100) + 1}</p>
+            </div>
+        )
+    }
+}
 
-
+// let Number = (props) => (
+//     <div className="number">
+//         <p>{Math.floor(Math.random() * 100) + 1}</p>
+//     </div>
+// );
 
 
 export default Number
