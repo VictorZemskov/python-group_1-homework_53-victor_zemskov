@@ -6,7 +6,7 @@ class Number extends Component {
     render(props) {
         return (
             <div className="number">
-                <p>{Math.floor(Math.random() * 100) + 1}</p>
+                <p>{this.props.digit}</p>
             </div>
         )
     }
