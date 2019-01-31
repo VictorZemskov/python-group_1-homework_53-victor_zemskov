@@ -16,19 +16,9 @@ class App extends Component {
       newState.numeral[a].digit = Math.floor(5 + Math.random() * (36 + 1 - 5));
     }
     this.setState(newState);
-    // top:
-    // for (var i=0; i < this.state.numeral.length; i++) {
-    //   for (var j=i+1; j < this.state.numeral.length; j++) {
-    //     if (this.state.numeral[i].digit === this.state.numeral[j].digit) {
-    //         for (var a=0; a < newState.numeral.length; a++) {
-    //             newState.numeral[a].digit = Math.floor(5 + Math.random() * (36 + 1 - 5));
-    //         }
-    //         this.setState(newState);
-    //         continue top;
-    //     }
-    //   }
-    // }
-    while (true) {
+
+    var condition = true;
+    while (condition) {
         for (var i=0; i < this.state.numeral.length; i++) {
             for (var j=i+1; j < this.state.numeral.length; j++) {
                 if (this.state.numeral[i].digit === this.state.numeral[j].digit) {
@@ -38,7 +28,7 @@ class App extends Component {
                     this.setState(newState);
                 }
                 else
-                    break;
+                    condition=false;
             }
         }
     }
