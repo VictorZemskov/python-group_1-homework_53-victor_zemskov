@@ -12,11 +12,8 @@ class Number extends Component {
     }
 }
 
-// let Number = (props) => (
-//     <div className="number">
-//         <p>{Math.floor(Math.random() * 100) + 1}</p>
-//     </div>
-// );
 
 
-export default Number
+
+export { Number };
+
